@@ -1,21 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
+import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, View} from 'react-native';
 import Header from './components/Header';
+import {globalStyles} from "./styles/global";
+import Home from "./containers/Home";
+import TabNavigator from "./components/Navigator";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Header />
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <TabNavigator/>
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f4f7fb',
-  },
-});
+export default App;
